@@ -1,0 +1,91 @@
+html {
+    background: url(../file/iStock-1185958014.jpg) no-repeat fixed center / cover;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    background-color: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    min-width: 336px;
+    padding: 2rem;
+    box-shadow: var(--boxshadow);
+    background-color: var(--sw-15-5);
+}
+figure {
+    margin: 0 0 2rem 0;
+}
+.logo {
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+}
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+input {
+    display: block;
+    width: 100%;
+    padding: .8rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--sw-14-5);
+    color: var(--sw-6);
+    background: var(--sw-16);
+    font-family: 'GT-Walsheim';
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+input[type=submit] {
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 0.6rem 3rem;
+    margin: 3rem auto 1rem;
+    border: none;
+    border-radius: 9999px;
+    background-color: var(--orange);
+    color: var(--sw-16);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+
+}
+input:focus, input:focus-visible {
+    outline-color: var(--orange);
+}
+input::placeholder {
+    color: var(--sw-12);
+}
+input[type=submit]:is(:hover, :focus) {
+    box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+    transform: scale(1.05);
+}
+/*===== dark color =====*/
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--sw-2);
+        background: url(../file/iStock-510329132.jpg) no-repeat fixed center / cover;
+    }
+    form {
+        background-color: var(--sw-3);
+    }
+    label {
+        color: var(--sw-14);
+    }
+    input {
+        border-color: var(--sw-5);
+        background: var(--sw-4);
+        color: var(--sw-15);
+    }
+    input::placeholder {
+        color: var(--sw-8);
+    }
+}
+

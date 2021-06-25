@@ -1,0 +1,358 @@
+/*======type=======*/
+@font-face {
+    font-family: 'GT-Walsheim';
+    font-weight: 400;
+    font-style: normal;
+    src: url(../file/GTWalsheimPro/GT-Walsheim-Pro-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'GT-Walsheim';
+    font-weight: 500;
+    font-style: normal;
+    src: url(../file/GTWalsheimPro/GT-Walsheim-Pro-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'GT-Walsheim';
+    font-weight: 900;
+    font-style: normal;
+    src: url(../file/GTWalsheimPro/GT-Walsheim-Pro-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v52/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*=======elements=======*/
+:root {
+    --orange: #e35205;
+    --cyan: #87d1e6;
+    --boxshadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+   
+    --sw-0: #000000;
+    --sw-0-5: #080808;
+    --sw-1: #101010;
+    --sw-1-5: #181818;
+    --sw-2: #202020;
+    --sw-2-5: #282828;
+    --sw-3: #303030;
+    --sw-3-5: #383838;
+    --sw-4: #404040;
+    --sw-4-5: #484848;
+    --sw-5: #505050;
+    --sw-5-5: #585858;
+    --sw-6: #606060;
+    --sw-6-5: #686868;
+    --sw-7: #707070;
+    --sw-7-5: #787878;
+    --sw-8: #808080;
+    --sw-8-5: #888888;
+    --sw-9: #909090;
+    --sw-9-5: #989898;
+    --sw-10: #a0a0a0;
+    --sw-10-5: #a8a8a8;
+    --sw-11: #b0b0b0;
+    --sw-11-5: #b8b8b8;
+    --sw-12: #c0c0c0;
+    --sw-12-5: #c8c8c8;
+    --sw-13: #d0d0d0;
+    --sw-13-5: #d8d8d8;
+    --sw-14: #e0e0e0;
+    --sw-14-5: #e8e8e8;
+    --sw-15: #f0f0f0;
+    --sw-15-5: #f8f8f8;
+    --sw-16: #ffffff;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    color: var(--sw-5);
+    background-color: var(--sw-15-5);
+    font-family: 'GT-Walsheim', helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    text-align: center;
+    padding: 0.8rem 2rem;
+}
+
+table tfoot {
+    color: var(--sw-8);
+}
+
+table tfoot td {
+    padding: 2rem 0;
+}
+
+select {
+    padding: 1rem;
+    padding-right: 2rem;
+    border: 0;
+    color: var(--sw-5);
+    background: url(../file/arrow.svg) no-repeat center right / 14px;
+    font-family: 'GT-Walsheim';
+    font-weight: 500;
+    font-size: 14px;
+    appearance: none;
+}
+
+
+/*=======components=======*/
+.logo {
+    height: 32px;
+}
+.micon {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    margin-right: 0.5rem;
+    border-radius: 999px;
+    color: var(--cyan);
+    background-color: var(--sw-16);
+    font-family: "material icons";
+    font-size: 16px;
+    line-height: 32px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    margin-left: 2rem;
+    color: var(--sw-16);
+    background-color: var(--orange);
+    text-decoration: none;
+}
+
+.btn span {
+    display: inline-block;
+    margin-right: 0.3rem;
+    font-family: 'material icons';
+    font-size: 16px;
+    vertical-align: text-bottom;
+}
+
+
+
+/*layout*/
+
+.nav {
+    padding: 0.5rem;
+    background-color: var(--sw-16);
+    text-align: center;
+}
+
+.pagefooter {
+    padding: 4rem 4rem;
+    background-color: var(--sw-8);
+    color: var(--sw-13);
+}
+
+.pagefooter ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.8rem;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 16px;
+}
+
+.filtergroup,
+.feed,
+.detail table {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.filtergroup {
+    background: var(--sw-16);
+    box-shadow: var(--boxshadow);
+}
+
+.filtergroup ul {
+    list-style: none;
+    padding: 0 2rem;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+/*    justify-content: space-around;*/
+/*    justify-content: space-evenly;*/
+}
+.filtergroup select {
+    min-width: 140px;
+    text-align-last: right;
+}
+
+.feed > caption {
+    padding: 1rem 0rem;
+    color: var(--sw-8);
+    text-align: left;
+}
+
+.feed > thead th {
+    padding: 0.9rem 2rem;
+    background-color: var(--orange);
+    color: var(--sw-16);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.feed > tbody {
+    background-color: var(--sw-15);
+}
+
+.feed > tbody > tr:nth-child(even) {
+    background-color: var(--sw-14-5);
+}
+
+.rownumber {
+    text-align: left;
+}
+
+.rownumber select {
+    color: inherit;
+    font-weight: 400;
+}
+
+.pagenumber {
+    letter-spacing: 0.5rem;
+}
+
+.download {
+    text-align: right;
+}
+
+.bold {
+    color: var(--sw-5);
+    font-weight: 900;
+}
+
+.detail {
+    padding-bottom: 1.6rem;
+    text-align: left;
+}
+
+tr:nth-child(odd) .detail {
+    background-color: var(--sw-14-5);
+}
+
+tr:nth-child(even) .detail {
+    background-color: var(--sw-15);
+}
+
+.detail fieldset {
+    padding: 0 1.8rem 0.6rem;
+    border: 1px solid var(--sw-13-5);
+    border-radius: 0.5rem;
+}
+
+.detail legend {
+    padding: 0rem 1.5rem;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+.detail th {
+    text-align: left;
+    font-weight: 500;
+    padding: 1rem 2rem;
+}
+
+.detail td {
+    padding: 1rem;
+    border-top: 1px solid var(--sw-13-5);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.detail input {
+    padding: 0.4rem;
+    border: 1px solid var(--sw-13);
+    color: var(--sw-7);
+    background-color: var(--sw-16);
+    font-family: 'GT-Walsheim';
+    font-size: 14px;
+}
+
+.detail input[type="checkbox"] {
+    margin-right: 1em;
+}
+
+.detail input[type="date"] {
+    width: 150px;
+}
+
+.detail select {
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border: 1px solid var(--sw-13);
+    color: var(--sw-7);
+    background: var(--sw-16);
+/*    background-color doesn't reset bg-image */
+    font-weight: 400;
+    appearance: auto;
+}
+
+.detail :disabled {
+    color: var(--sw-13-5);
+    border: 1px solid var(--sw-14);
+    background-color: var(--sw-15-5);
+}
+
+.detail :disabled + label {
+    color: var(--sw-12);
+}
+
+.detail p {
+    margin: 1rem 0 0;
+    text-align: right;
+}
+
+/* dark theme */

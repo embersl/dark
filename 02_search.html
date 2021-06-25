@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A html/css prototype of the UI design">
+    <meta name="color-scheme" content="light dark">
+    <title>Search - Banfield Operation Redistribution Prototype</title>
+    <link rel="icon" href="file/favicon.png">
+    <link href="css/search.css" rel="stylesheet">
+    <!--    light scheme option b -->
+    <link href="css/light_b.css" rel="stylesheet">
+    <link href="css/dark.css" rel="stylesheet">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <nav class="nav">
+        <img src="file/banfield_logo.svg" alt="banfield logo" class="logo">
+    </nav>
+    <header class="filtergroup">
+        <ul>
+            <li>
+                <select name="division" id="division">
+                    <option value="a">Division</option>
+                    <option value="b">Washington</option>
+                    <option value="c">Oregon</option>
+                    <option value="d">SoCal</option>
+                    <option value="e">NoCal</option>
+                </select>
+            </li>
+
+            <li>
+                <select name="region" id="region">
+                    <option value="a">Region</option>
+                    <option value="b">South Bay</option>
+                    <option value="c">Orange</option>
+                    <option value="d">San Diego</option>
+                    <option value="e">Coachella</option>
+                </select>
+            </li>
+
+            <li>
+                <select name="market" id="market">
+                    <option>Market</option>
+                    <option value="b">Referal</option>
+                    <option value="c">Flagship</option>
+                    <option value="d">Growth</option>
+                    <option value="e">Value</option>
+                </select>
+            </li>
+
+            <li>
+                <select name="hospital" id="hospital">
+                    <option>Hospital Type</option>
+                    <option value="b">24hrs</option>
+                    <option value="c">Routine Care</option>
+                    <option value="d">Emergency</option>
+                    <option value="e">Shelter Partner</option>
+                </select>
+            </li>
+            
+            <li>
+                <select name="operation" id="operation">
+                    <option>Operation History</option>
+                    <option value="b">under 2 years</option>
+                    <option value="c">2-4 years</option>
+                    <option value="d">4-6 years</option>
+                    <option value="e">6+ years</option>
+                </select>
+            </li>
+        </ul>
+    </header>
+    <table class="feed">
+        <caption>76 out of 1100 hospitals match the search criteria</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Location</th>
+                <th scope="col">Zipcode</th>
+                <th scope="col">Open Date</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td class="rownumber">
+                    <select>
+                        <option>20 rows per page</option>
+                        <option>40 rows per page</option>
+                        <option>60 rows per page</option>
+                    </select>
+                </td>
+                <td colspan="3" class="pagenumber"><span class="bold">1</span> 2 3 4 5 6 7</td>
+                <td class="download"><a href="#"><span class="micon">get_app</span>Download Migration Details</a></td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>4027</td>
+                <td>Wonder Lake</td>
+                <td>Wonder Lake</td>
+                <td>60097</td>
+                <td>7/12/2018</td>
+            </tr>
+            <tr>
+                <td>1136</td>
+                <td>Lombard</td>
+                <td>Downers Grove</td>
+                <td>60515</td>
+                <td>2/14/2004</td>
+            </tr>
+            <tr>
+                <td>1139</td>
+                <td>Skokie (Niles)</td>
+                <td>Skokie</td>
+                <td>60077</td>
+                <td>3/6/2004</td>
+            </tr>
+            <tr>
+                <td>1181</td>
+                <td>Schaumburg</td>
+                <td>Schaumburg</td>
+                <td>60173</td>
+                <td>5/15/2004</td>
+            </tr>
+            <tr>
+                <td>1262</td>
+                <td>Niles N</td>
+                <td>Niles</td>
+                <td>60714</td>
+                <td>11/19/1994</td>
+            </tr>
+            <tr>
+                <td>1371</td>
+                <td>South Elgin</td>
+                <td>South Elgin</td>
+                <td>60177</td>
+                <td>2/3/2007</td>
+            </tr>
+            <tr>
+                <td>1372</td>
+                <td>Hoffman Estates</td>
+                <td>Hoffman Estates</td>
+                <td>60192</td>
+                <td>4/8/2006</td>
+            </tr>
+            <tr>
+                <td class="detail" colspan="5">
+                    <fieldset>
+                        <legend>Redirection Detail</legend>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Service</th>
+                                    <th scope="col">Start Date</th>
+                                    <th scope="col">End Date</th>
+                                    <th scope="col">Alternate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input name="comp" type="checkbox" id="comp" disabled>
+                                        <label for="comp">Comp</label>
+                                    </td>
+                                    <td>
+                                        <input name="startdate" type="date" id="date" disabled>
+                                    </td>
+                                    <td>
+                                        <input name="enddate" type="date" id="date" disabled>
+                                    </td>
+                                    <td>
+                                        <select name="alternate" id="alternate" disabled>
+                                            <option value="">Select Hospital</option>
+                                            <option value="1">Hospital 1</option>
+                                            <option value="2">Hospital 2</option>
+                                            <option value="3">Hospital 3</option>
+                                            <option value="4">Hospital 4</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="dental" type="checkbox" id="dental" checked>
+                                        <label for="dental">Dental</label>
+                                    </td>
+                                    <td>
+                                        <input name="startdate" type="date" id="date">
+                                    </td>
+                                    <td>
+                                        <input name="enddate" type="date" id="date">
+                                    </td>
+                                    <td>
+                                        <select name="alternate" id="alternate">
+                                            <option value="">Select Hospital</option>
+                                            <option value="1">Hospital 1</option>
+                                            <option value="2">Hospital 2</option>
+                                            <option value="3">Hospital 3</option>
+                                            <option value="4">Hospital 4</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="va" type="checkbox" id="vax" checked>
+                                        <label for="vax">Vax</label>
+                                    </td>
+                                    <td>
+                                        <input name="" type="date" id="date">
+                                    </td>
+                                    <td>
+                                        <input name="" type="date" id="date">
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">Select Hospital</option>
+                                            <option value="">Hospital 1</option>
+                                            <option value="">Hospital 2</option>
+                                            <option value="">Hospital 3</option>
+                                            <option value="">Hospital 4</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input name="" type="checkbox" id="parasite" disabled>
+                                        <label for="parasite">Parasite</label>
+                                    </td>
+                                    <td>
+                                        <input name="" type="date" id="date" disabled>
+                                    </td>
+                                    <td>
+                                        <input name="" type="date" id="date" disabled>
+                                    </td>
+                                    <td>
+                                        <select name="" id="" disabled>
+                                            <option value="">Select Hospital</option>
+                                            <option value="">Hospital 1</option>
+                                            <option value="">Hospital 2</option>
+                                            <option value="">Hospital 3</option>
+                                            <option value="">Hospital 4</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <p>
+                        <a href="#" class="btn"><span>close</span>Cancel</a>
+                        <a href="#" class="btn"><span>check</span>Confirm</a>
+                    </p>
+                </td>
+            </tr>
+            <tr class="skip">
+            </tr>
+            <tr>
+                <td>1373</td>
+                <td>Kildeer</td>
+                <td>Kildeer</td>
+                <td>60047</td>
+                <td>8/27/2005</td>
+            </tr>
+            <tr>
+                <td>2044</td>
+                <td>Mt Prospect</td>
+                <td>Mount Prospect</td>
+                <td>60056</td>
+                <td>9/19/1994</td>
+            </tr>
+            <tr>
+                <td>2147</td>
+                <td>Vernon Hills</td>
+                <td>Vernon Hills</td>
+                <td>60061</td>
+                <td>10/15/2012</td>
+            </tr>
+            <tr>
+                <td>0421</td>
+                <td>Bloomingdale</td>
+                <td>Bloomingdale</td>
+                <td>60108</td>
+                <td>11/19/1994</td>
+            </tr>
+            <tr>
+                <td>0427</td>
+                <td>Evanston</td>
+                <td>Evanston</td>
+                <td>60202</td>
+                <td>12/6/2003</td>
+            </tr>
+            <tr>
+                <td>0436</td>
+                <td>Gurnee</td>
+                <td>Gurnee</td>
+                <td>60031</td>
+                <td>1/11/2003</td>
+            </tr>
+            <tr>
+                <td>0476</td>
+                <td>Brickyard</td>
+                <td>Chicago</td>
+                <td>60707</td>
+                <td>8/19/2006</td>
+            </tr>
+            <tr>
+                <td>0477</td>
+                <td>Crystal Lake</td>
+                <td>Crystal Lake</td>
+                <td>60014</td>
+                <td>7/5/2004</td>
+            </tr>
+        </tbody>
+    </table>
+    <footer class="pagefooter">
+    <img src="file/banfield_logo_light.svg" alt="banfield logo dark" class="logo">       
+    <ul>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Support</a></li>
+    <li><a href="#">Locate a clinic</a></li>
+    <li><a href="#">Main business site</a></li>
+    <li><a href="#">Seasonal Calendar</a></li>
+    <li><a href="#">Events</a></li>
+    </ul>
+
+    </footer>
+</body>
+
+</html>

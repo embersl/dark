@@ -1,0 +1,148 @@
+/*type*/
+thead th {
+    font-size: 12px;
+}
+
+/*color*/
+select:focus, select:focus-visible {
+    outline-color: var(--orange);
+}
+body {
+    background-color: var(--sw-13);
+}
+section {
+    background-color: var(--sw-16);
+    box-shadow: var(--boxshadow);
+}
+.yearselect {
+    color: var(--sw-11);
+}
+.month {
+    color: var(--sw-6);
+}
+th {
+    color: var(--sw-3);
+}
+td {
+    color: var(--sw-8);
+}
+tr:first-of-type td:nth-child(-n+2), tr:last-of-type td:nth-child(n+5) {
+    color: var(--sw-13);
+}
+.highlightrow {
+    background-color: #e3520533;
+}
+.highlightcell {
+    background-color: var(--orange);
+    color: var(--sw-16);
+/*    font-weight: bold;*/
+}
+
+/*dark*/
+.container:nth-of-type(2) {
+    background-color: var(--sw-3);
+}
+.dark {
+    background-color: var(--sw-4);
+}
+.dark .yearselect {
+    color: var(--sw-11);
+}
+.dark .month {
+    color: var(--sw-14);
+}
+/* option styling to offsett firefox UA */
+.dark .month option {
+    color: var(--sw-14);
+    background: var(--sw-4);
+    font-family: 'GT-Walsheim', sans-serif;
+/*    font-family doesn't work */
+    font-weight: 400;
+}
+.dark th {
+    color: var(--sw-16);
+}
+.dark td {
+    color: var(--sw-16);
+}
+.dark tr:first-of-type td:nth-child(-n+2), .dark tr:last-of-type td:nth-child(n+5) {
+    color: var(--sw-7);
+}
+
+/*format*/
+html {
+    height: 100%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+section {
+    padding: 2rem 2rem;
+    width: fit-content;
+}
+
+select {
+    cursor: pointer;
+}
+
+.yearselect {
+    padding: 0 3rem 0 0;
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    background: url(../file/calendararrowyear.svg) no-repeat center right 1rem;
+}
+
+.monthselect {
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+    align-items: center;
+}
+.monthselect .month {
+    margin: 0 2rem;
+    padding: 0;
+    text-align-last: center;
+    background: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+.monthselect a:last-child img {
+    transform: rotate(180deg);
+}
+
+table th, table td {
+    padding: 1em 0.6em;
+}
+col {
+    width: 40px;
+}
+tbody {
+    counter-reset: calendardates 29;
+}
+tbody td {
+    counter-increment: calendardates;
+}
+tbody td::before {
+    content: counter(calendardates);
+}
+.dateone {
+    counter-set: calendardates 1;
+}
+.btn {
+    margin: 2.5rem 0 0 auto;
+    display: block;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
+@media (min-width: 768px) {
+    body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+}
+}

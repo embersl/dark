@@ -1,0 +1,16 @@
+body {
+    background-color: var(--sw-13-5);
+}
+
+/*components*/
+.micon {
+    background-color: var(--sw-14-5);
+}
+
+/*layout*/
+.nav {
+    background-color: var(--sw-15);
+}
+.filtergroup {
+    background-color: var(--sw-15-5)
+}

@@ -1,0 +1,83 @@
+@media (prefers-color-scheme: dark) {
+    body {
+/*        color: red;*/
+    }
+    input {
+/*        color-scheme: dark;*/
+    }
+/*    for demo purposes, this dark scheme media query won't be used. All properties inside will be overriden by the ones come after (outside the query) per cascade order */
+    
+    /*======== base elements   ===========*/
+body {
+    color: var(--sw-14);
+    background-color: var(--sw-2);
+}
+table tfoot, .feed > caption {
+    color: var(--sw-11);
+}
+select {
+    color: var(--sw-15);
+}
+
+
+/*======== components  ===========*/
+.micon {
+    background-color: var(--sw-3);
+}
+.bold {
+    color: var(--sw-14);
+}
+
+
+/*======== layouts ===========*/
+.filtergroup {
+    background-color: var(--sw-4);
+}
+.feed > tbody {
+    background-color: var(--sw-3);
+}
+.feed > tbody > tr:nth-child(even) {
+    background-color: var(--sw-3-5);
+}
+.nav, .pagefooter {
+    background: var(--sw-3);
+}
+tr:nth-child(odd) .detail {
+    background: var(--sw-3-5);
+}
+
+tr:nth-child(even) .detail {
+    background: var(--sw-3);
+}
+
+.detail fieldset {
+    border-color: var(--sw-4-5);
+}
+
+.detail td {
+    border-top-color: var(--sw-4-5);
+}
+
+.detail input {
+    border-color: var(--sw-6);
+    color: var(--sw-15);
+    background-color: var(--sw-5);
+}
+.detail select {
+    border-color: var(--sw-6);
+    color: var(--sw-15);
+    background-color: var(--sw-5);
+}
+.detail :disabled {
+    color: var(--sw-6);
+    background-color: var(--sw-4);
+    border-color: var(--sw-5);
+}
+.detail :disabled + label {
+    color: var(--sw-5);
+}
+.pagefooter {
+    color: var(--sw-10);
+}
+}
+
