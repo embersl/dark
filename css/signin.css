@@ -1,5 +1,4 @@
 html {
-    background: url(../file/iStock-1185958014.jpg) no-repeat fixed center / cover;
     height: 100%;
 }
 
@@ -9,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url(../file/iStock-1185958014.jpg) no-repeat fixed center / cover;
 }
 
 form {
@@ -70,8 +70,8 @@ input[type=submit]:is(:hover, :focus) {
 /*===== dark color =====*/
 @media (prefers-color-scheme: dark) {
     body {
-        background: var(--sw-2);
-        background: url(../file/iStock-510329132.jpg) no-repeat fixed center / cover;
+        background-color: var(--sw-2);
+        background-image: url(../file/iStock-510329132.jpg);
     }
     form {
         background-color: var(--sw-3);
