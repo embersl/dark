@@ -134,10 +134,13 @@ select {
     border: 0;
     color: var(--sw-5);
     background: url(../file/arrow.svg) no-repeat center right / 14px;
-    font-family: 'GT-Walsheim';
+    font-family: 'GT-Walsheim', helvetica, sans-serif;
     font-weight: 500;
     font-size: 14px;
     appearance: none;
+}
+option {
+    font-family: 'GT-Walsheim', helvetica, sans-serif;
 }
 
 

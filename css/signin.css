@@ -37,7 +37,7 @@ input {
     margin-bottom: 2rem;
     border: 1px solid var(--sw-14-5);
     color: var(--sw-6);
-    background: var(--sw-16);
+    background-color: var(--sw-16);
     font-family: 'GT-Walsheim';
     font-weight: 400;
     font-size: 16px;
@@ -81,7 +81,7 @@ input[type=submit]:is(:hover, :focus) {
     }
     input {
         border-color: var(--sw-5);
-        background: var(--sw-4);
+        background-color: var(--sw-4);
         color: var(--sw-15);
     }
     input::placeholder {

@@ -33,6 +33,10 @@ select {
 .filtergroup {
     background-color: var(--sw-4);
 }
+    .filtergroup select {
+        background-color: var(--sw-4);
+/*        For Firefox on Mac, and Window broswers*/
+    }
 .feed > tbody {
     background-color: var(--sw-3);
 }
@@ -75,6 +79,9 @@ tr:nth-child(even) .detail {
 }
 .detail :disabled + label {
     color: var(--sw-5);
+}
+table tfoot select {
+    background-color: var(--sw-2);
 }
 .pagefooter {
     color: var(--sw-10);
